@@ -65,6 +65,9 @@ http.listen(port, () => {
     console.log(`App listening on port ${port}!`)
     if (process.env.NODE_ENV === 'production') {
         console.log('Hello render.com')
+        if (process.env.SECRET1) {
+            console.log('process.env.SECRET1', process.env.SECRET1)
+        }
     }
     else console.log('Hello World!')
 })
